@@ -14,6 +14,7 @@ import { MdEdit } from "react-icons/md";
 import { useQuery } from "@tanstack/react-query";
 import useFollow from "../../hooks/useFollow"
 import useUpdateUserProfile from "../../hooks/useUpdateUserProfile";
+import {formatMemberSinceDate} from "../../utils/date/index"
 
 
 const ProfilePage = () => {
@@ -53,7 +54,7 @@ const ProfilePage = () => {
 	const { isUpdatingProfile, updateProfile } = useUpdateUserProfile();
 
 	const isMyProfile = authUser._id === user?._id;
-	// const memberSinceDate = formatMemberSinceDate(user?.createdAt);
+	const memberSinceDate = formatMemberSinceDate(user?.createdAt);
 	const amIFollowing = authUser?.following.includes(user?._id);
 
 	const handleImgChange = (e, state) => {
@@ -179,7 +180,7 @@ const ProfilePage = () => {
 													rel='noreferrer'
 													className='text-sm text-blue-500 hover:underline'
 												>
-													{/* Updated this after recording the video. I forgot to update this while recording, sorry, thx. */}
+													
 													{user?.link}
 												</a>
 											</>
@@ -187,7 +188,7 @@ const ProfilePage = () => {
 									)}
 									<div className='flex gap-2 items-center'>
 										<IoCalendarOutline className='w-4 h-4 text-slate-500' />
-										{/* <span className='text-sm text-slate-500'>{memberSinceDate}</span> */}
+										<span className='text-sm text-slate-500'>{memberSinceDate}</span>
 									</div>
 								</div>
 								<div className='flex gap-2'>
