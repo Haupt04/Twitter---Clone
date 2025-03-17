@@ -2,9 +2,9 @@ import { generateTokenAndSetCookie } from '../lib/utils/generateToken.js';
 import User from '../models/user.model.js'
 import bcrypt from 'bcryptjs'
 
-export const signup = async (req,res) => {
+export const signup = async (req, res) => {
     try {
-        const {fullName, username,email,password} = req.body;
+        const {fullName, username, email, password} = req.body;
 
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 

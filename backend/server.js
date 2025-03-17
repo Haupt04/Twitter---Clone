@@ -8,6 +8,7 @@ import userRoute from './routes/user.route.js';
 import authRoute from './routes/auth.route.js';
 import postRoute from './routes/post.route.js';
 import notificationRoutes from './routes/notifications.route.js';
+import cors from "cors";
 
 dotenv.config();
 
@@ -20,6 +21,11 @@ cloudinary.config({
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+app.use(cors({
+    origin: "http://localhost:3000",  // ✅ Allow frontend
+    credentials: true
+  }));
+  
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}))
