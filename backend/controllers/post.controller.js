@@ -30,7 +30,7 @@ export const createPost = async (req, res) => {
 		await newPost.save();
 		res.status(201).json(newPost);
 	} catch (error) {
-		res.status(500).json({ error: "Internal server error (createPost controller)" });
+		res.status(500).json({ error: "Internal server error" });
 		console.log("Error in createPost controller: ", error);
 	}
 };
