@@ -1,5 +1,7 @@
 # Social Media App
 
+![Twitter Clone](https://github.com/user-attachments/assets/0ca66705-218d-4391-87b7-7332720c21bb)
+
 A full-stack social media application built with modern technologies, featuring authentication, posts, likes, comments, and user interactions.
 
 ## Features
@@ -17,6 +19,7 @@ A full-stack social media application built with modern technologies, featuring 
 - **Image Uploads** using Cloudinary
 - **Send Notifications**
 - **Deployment Ready**
+
 
 ## Installation & Setup
 
@@ -68,6 +71,8 @@ A full-stack social media application built with modern technologies, featuring 
 This application is fully deployable. Ensure that your environment variables are correctly configured for production.
 
 It is live on at https://twitter-clone-o8oz.onrender.com/
+
+Note: The website will spin down with inactivity, which can delay requests by 50 seconds or more.
 
 
 
